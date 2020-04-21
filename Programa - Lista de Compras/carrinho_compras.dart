@@ -12,8 +12,9 @@ main() {
       print("====== Terminou o programa ======");
       condicao = false;
     } else if (text == "imprimir") {
-      print(produtos);
-      print("\n");
+      for (var i = 0; i < produtos.length; i++) {
+        print("Item $i - ${produtos[i]}");
+      }
     } else {
       produtos.add(text);
       print("\x1B[2J\x1B[0;0H");
